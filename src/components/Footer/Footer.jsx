@@ -2,16 +2,23 @@ import logo from "../../assets/image/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 px-32 justify-between mt-10">
-      <div className="flex items-center gap-3">
-        <img className="h-8 w-auto" src={logo} alt="" />
-        <h3 className="font-bold uppercase" style={{ color: "#632EE3" }}>
-          Hero.IO
-        </h3>
-      </div>
-      <nav>
-        <h6 className="footer-title">Social</h6>
-        <div className="grid grid-flow-col gap-4">
+    <footer className="bg-neutral text-neutral-content mt-10">
+
+      {/* Top Section */}
+      <div className="footer flex flex-col sm:flex-row justify-between items-center p-10 px-32 gap-6">
+
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <img className="h-8 w-auto" src={logo} alt="" />
+          <h3 className="font-bold uppercase" style={{ color: "#632EE3" }}>
+            Hero.IO
+          </h3>
+        </div>
+
+        {/* Social */}
+        <nav>
+       <h6 className="footer-title">Social</h6>
+       <div className="grid grid-flow-col gap-4">
           <a
             href="https://github.com/mojahidmamu"
             target="_blank"
@@ -70,6 +77,18 @@ const Footer = () => {
           </a>
         </div>
       </nav>
+      </div>
+
+      {/* Divider */}
+      <div className="divider m-0"></div>
+
+      {/* Bottom Section */}
+      <div className="text-center p-4">
+        <h1 className="text-sm font-medium">
+          Copyright © {new Date().getFullYear()} Hero.IO. All rights reserved.
+        </h1>
+      </div>
+
     </footer>
   );
 };
