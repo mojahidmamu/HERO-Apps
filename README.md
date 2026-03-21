@@ -29,3 +29,10 @@ This project is built using React and styled with Tailwind CSS & DaisyUI for fas
 ---
 
 ## 📂 Live Link:  https://hero-apps-inky.vercel.app/
+
+🙋‍♂️ Author
+
+Abdullah Al Mojahid
+
+GitHub: https://github.com/mojahidmamu
+Codeforces: https://codeforces.com/profile/Abdullah_all_Mojahid
