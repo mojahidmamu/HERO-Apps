@@ -65,12 +65,11 @@ const Navbar = () => {
             className="btn text-white mr-3"
             style={{ backgroundColor: "#632EE3" }}
           >
-          <Link to="/contribute">
+          <Link to="https://github.com/mojahidmamu">
             Contribute  
           </Link>
           </a>
         </div>
-         
       </div>
     </div>
   );

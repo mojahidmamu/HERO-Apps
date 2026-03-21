@@ -3,7 +3,7 @@ import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Home/Home";
 import Apps from "../../components/Apps/Apps";
 import Installation from "../Installation/Installation";
-import Contribute from "../Contribute/Contribute";
+// import Contribute from "../Contribute/Contribute";
 // import Details from "../Details/Details";
 
 const router = createBrowserRouter([
@@ -33,10 +33,10 @@ const router = createBrowserRouter([
         path: "/installation",
         element: <Installation></Installation>,
       },
-      {
-        path: "/contribute",
-        element: <Contribute></Contribute>
-      }
+      // {
+      //   path: "/contribute",
+      //   element: <Contribute></Contribute>
+      // }
       // {
       //   path: "/details",
       //   element: <CheckOut></CheckOut>,
