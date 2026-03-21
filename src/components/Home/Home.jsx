@@ -3,14 +3,14 @@
 // import { authContext } from "../MainLayout/MainLayout";
 
 import banner from "../../assets/image/hero.png";
-import { Link, useLoaderData } from "react-router-dom"; 
+import { Link } from "react-router-dom"; 
 import TreadingPage from "../TreadingPage/TreadingPage";
 // import AuthComponent from "../AuthComponent/AuthComponent";
 
 const Home = () => {
-  const services = useLoaderData();
+  // const services = useLoaderData();
   // console.log(services);
-  const { servicesData, feedBackData } = services;
+  // const { servicesData, feedBackData } = services;
 
   // const contextValue = useContext(authContext);
   // const { handleGithubLogin, handleGoogleLogin, handleTwitterLogin } =
