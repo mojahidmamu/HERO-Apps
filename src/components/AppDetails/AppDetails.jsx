@@ -9,20 +9,15 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import downloadIcon from "../../assets/image/icon-downloads.png";
+import ratingsIcon from "../../assets/image/icon-ratings.png";
+import reviewIcon from "../../assets/image/reviews.png";
 
-
-// const reviewData = [
-//   { name: "5★", value: 120 },
-//   { name: "4★", value: 90 },
-//   { name: "3★", value: 40 },
-//   { name: "2★", value: 20 },
-//   { name: "1★", value: 10 },
-// ];
   
 
 const AppDetails = () => {
 
-   const { id } = useParams();
+  const { id } = useParams();
   const [app, setApp] = useState(null);
   const [installed, setInstalled] = useState(false);
 
@@ -35,7 +30,8 @@ const AppDetails = () => {
       });
   }, [id]);
 
-   // 🔥 Convert ratings → chart format
+  if (!app) return <p className="p-10">Loading...</p>;
+
   const chartData = app.ratings.map((r) => ({
     name: r.name,
     value: r.count,
@@ -50,28 +46,26 @@ const AppDetails = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-10">
-
-      {/* ===== Top Section ===== */}
       <div className="flex gap-6 border-b pb-6">
-
         <img src={app.image} className="w-40 h-40 rounded" />
-
         <div>
-          <h1 className="text-2xl font-bold">{app.title}</h1>
-          <p className="text-gray-500">by {app.companyName}</p>
-
+          <h1 className="text-3xl font-bold">{app.title}</h1>
+          <p className="text-gray-500">Developed by <span className="text-[#632EE3] font-semibold">{app.companyName}</span></p>
           <div className="flex gap-8 mt-4">
             <div>
-              <p>Downloads</p>
-              <h3>{app.downloads}</h3>
+              <img className="w-8 h-8" src={downloadIcon} alt="Downloads" />
+              <p className="font-semibold">Downloads</p>
+              <h3 className="font-extrabold text-5xl">{app.downloads}</h3>
             </div>
             <div>
-              <p>Rating</p>
-              <h3>{app.ratingAvg}</h3>
+              <img className="w-8 h-8"  src={ratingsIcon} alt="Ratings" />
+              <p  className="font-semibold">Average Rating</p>
+              <h3 className="font-extrabold text-5xl">{app.ratingAvg}</h3>
             </div>
             <div>
-              <p>Reviews</p>
-              <h3>{app.reviews}</h3>
+              <img className="w-8 h-8" src={reviewIcon} alt="Reviews" />
+              <p className="font-semibold">Total Reviews</p>
+              <h3 className="font-extrabold text-5xl">{app.reviews}</h3>
             </div>
           </div>
 
@@ -87,10 +81,8 @@ const AppDetails = () => {
         </div>
       </div>
 
-      {/* ===== Chart ===== */}
       <div>
         <h2 className="mb-4 font-semibold">Ratings</h2>
-
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData} layout="vertical">
@@ -102,10 +94,9 @@ const AppDetails = () => {
           </ResponsiveContainer>
         </div>
       </div>
-
-      {/* ===== Description ===== */}
+ 
       <div className="border-t pt-6">
-        <h2 className="font-semibold mb-2">Description</h2>
+        <h2 className="font-semibold mb-2 text-xl">Description</h2>
         <p className="text-gray-600">{app.description}</p>
       </div>
     </div>
