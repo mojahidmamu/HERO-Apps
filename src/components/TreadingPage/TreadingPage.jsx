@@ -26,33 +26,38 @@ const TreadingPage = () => {
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 justify-center items-center mt-6 mx-8">
         {
           apps.map( (app) => (
-            <Link key={app.id} 
-            to={`/apps/${app.id}`}>
-              <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
-                <img className="w-60 h-50 rounded-xl mb-3" src={app.image} alt="" />
-                <p className="font-bold">{app.name}</p>
-                <div className="flex mt-2 justify-between">
-                  <div
-                    className="h-10 w-18 rounded-sm p-2 flex gap-2 "
-                    style={{ backgroundColor: "#F1F5E8" }}
-                  >
-                    <img className="w-5 h-5" src={downloadIcon} alt="" />
-                    <p className="font-bold" style={{ color: "#00D390" }}>
-                      {app.downloads}
-                    </p>
-                  </div>
-                  <div
-                    className="h-10 w-18 rounded-sm p-2 flex gap-2"
-                    style={{ backgroundColor: "#FFF0E1" }}  
-                  >
-                    <img className="w-5 h-5" src={ratingsIcon} alt="" />
-                    <p className="font-bold" style={{ color: "#FF8811" }}>
-                      {app.ratingAvg}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <Link key={app.id} to={`/apps/${app.id}`}>
+                            <div className="border p-4 rounded-sm shadow-md w-72 hover:shadow-xl transition cursor-pointer">
+                              <img
+                                className="w-full h-40 object-cover rounded-xl mb-3"
+                                src={app.image}
+                                alt={app.title}
+                              />
+                              <p className="font-bold">{app.title}</p>
+            
+                              <div className="flex mt-2 justify-between">
+                                <div
+                                  className="h-10 px-2 rounded-sm flex items-center gap-2"
+                                  style={{ backgroundColor: "#F1F5E8" }}
+                                >
+                                  <img className="w-5 h-5" src={downloadIcon} alt="" />
+                                  <p className="font-bold text-[#00D390]">
+                                    {app.downloads}
+                                  </p>
+                                </div>
+            
+                                <div
+                                  className="h-10 px-2 rounded-sm flex items-center gap-2"
+                                  style={{ backgroundColor: "#FFF0E1" }}
+                                >
+                                  <img className="w-5 h-5" src={ratingsIcon} alt="" />
+                                  <p className="font-bold text-[#FF8811]">
+                                    {app.ratingAvg}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </Link>
           ))
         }
       </div>
