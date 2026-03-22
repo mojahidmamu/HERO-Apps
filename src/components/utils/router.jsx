@@ -15,15 +15,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: async () => {
-          const dataRes = await fetch("/service.json");
-          const servicesData = await dataRes.json();
-
-          const feedBackRes = await fetch("/review.json");
-          const feedBackData = await feedBackRes.json();
-
-          return { servicesData, feedBackData };
-        },
       },
       {
         path: "/apps",
