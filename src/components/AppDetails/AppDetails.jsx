@@ -1,25 +1,55 @@
-import { useState } from "react";
-import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify"; 
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 
-const reviewData = [
-  { name: "5★", value: 120 },
-  { name: "4★", value: 90 },
-  { name: "3★", value: 40 },
-  { name: "2★", value: 20 },
-  { name: "1★", value: 10 },
-];
-
-export default function appDetails() {
-  const [installed, setInstalled] = useState(false);
-
- const handleInstall = () => {
-    setInstalled(true);
-  }
-  toast.success("App installed successfully!");
-}
+// const reviewData = [
+//   { name: "5★", value: 120 },
+//   { name: "4★", value: 90 },
+//   { name: "3★", value: 40 },
+//   { name: "2★", value: 20 },
+//   { name: "1★", value: 10 },
+// ];
+  
 
 const AppDetails = () => {
+
+   const { id } = useParams();
+
+  const [apps, setApps] = useState([]);
+  const [app, setApp] = useState(null);
+  const [installed, setInstalled] = useState(false);
+
+   // 🔥 Fetch JSON from public folder
+  useEffect(() => {
+    fetch("./data.json")
+      .then((res) => res.json())
+      .then((data) => setApps(data));
+  }, []);
+
+  
+  useEffect(() => {
+    if (apps.length > 0) {
+      const found = apps.find((item) => item.id === id);
+      setApp(found);
+    }
+  }, [apps, id]);
+
+  if (!app) return <p className="p-10">Loading...</p>;
+
+  const handleInstall = () => {
+    setInstalled(true);
+    toast.success("App installed successfully!");
+  };
+
   return (
     <div>
       
@@ -59,11 +89,7 @@ const AppDetails = () => {
       {/* Description section  */}
       <div className="bg-white p-6 rounded-xl shadow">
         <h2 className="text-xl font-semibold mb-3">Description</h2>
-        <p className="text-gray-600 leading-relaxed">
-          This is a powerful mobile application designed to improve productivity,
-          manage tasks efficiently, and provide a smooth user experience.
-          It includes modern UI, fast performance, and secure data handling.
-        </p>
+        <p className="text-gray-600">{app.description}</p>
       </div>
     </div>
   );

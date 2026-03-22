@@ -4,8 +4,8 @@ import Home from "../Home/Home";
 import Apps from "../../components/Apps/Apps";
 import Installation from "../Installation/Installation";
 import AppDetails from "../AppDetails/AppDetails";
-// import Contribute from "../Contribute/Contribute";
-// import Details from "../Details/Details";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; 
 
 const router = createBrowserRouter([
   {
@@ -37,7 +37,8 @@ const router = createBrowserRouter([
       {
         path: "/apps/:id",
         element: <AppDetails></AppDetails>
-      }
+      },
+       <ToastContainer position="top-right" />
       // {
       //   path: "/contribute",
       //   element: <Contribute></Contribute>
