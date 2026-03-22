@@ -1,0 +1,363 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/app1.png",
+    "title": "CodeMaster",
+    "companyName": "DevSoft",
+    "description": "Learn programming with interactive challenges.",
+    "size": 45,
+    "reviews": 1200,
+    "ratingAvg": 4.6,
+    "downloads": 50000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 600 }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/app2.png",
+    "title": "TaskFlow",
+    "companyName": "Productive Inc.",
+    "description": "Organize your tasks and boost productivity.",
+    "size": 30,
+    "reviews": 900,
+    "ratingAvg": 4.3,
+    "downloads": 30000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 320 }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/app3.png",
+    "title": "FitLife",
+    "companyName": "HealthTech",
+    "description": "Track workouts and stay healthy.",
+    "size": 60,
+    "reviews": 2000,
+    "ratingAvg": 4.7,
+    "downloads": 80000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1210 }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/app4.png",
+    "title": "NoteNest",
+    "companyName": "WriteWell",
+    "description": "Take notes and sync across devices.",
+    "size": 25,
+    "reviews": 700,
+    "ratingAvg": 4.4,
+    "downloads": 25000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 270 }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/app5.png",
+    "title": "ShopEasy",
+    "companyName": "MarketHub",
+    "description": "Online shopping made simple.",
+    "size": 55,
+    "reviews": 1500,
+    "ratingAvg": 4.5,
+    "downloads": 70000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 700 }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/app6.png",
+    "title": "WeatherNow",
+    "companyName": "SkyTech",
+    "description": "Real-time weather forecast.",
+    "size": 20,
+    "reviews": 800,
+    "ratingAvg": 4.2,
+    "downloads": 40000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 285 }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/app7.png",
+    "title": "ChatSphere",
+    "companyName": "ConnectX",
+    "description": "Secure messaging platform.",
+    "size": 65,
+    "reviews": 3000,
+    "ratingAvg": 4.8,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 2060 }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/app8.png",
+    "title": "PhotoPro",
+    "companyName": "PixelLab",
+    "description": "Edit photos professionally.",
+    "size": 75,
+    "reviews": 2500,
+    "ratingAvg": 4.6,
+    "downloads": 90000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1510 }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/app9.png",
+    "title": "EduWorld",
+    "companyName": "LearnHub",
+    "description": "Online learning platform.",
+    "size": 50,
+    "reviews": 1800,
+    "ratingAvg": 4.7,
+    "downloads": 85000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1080 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co/app10.png",
+    "title": "MusicBeat",
+    "companyName": "SoundWave",
+    "description": "Stream music anytime.",
+    "size": 80,
+    "reviews": 2200,
+    "ratingAvg": 4.5,
+    "downloads": 100000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 55 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1330 }
+    ]
+  },
+
+  {
+    "id": 11,
+    "image": "https://i.ibb.co/app11.png",
+    "title": "NewsFlash",
+    "companyName": "MediaTech",
+    "description": "Latest news updates worldwide.",
+    "size": 35,
+    "reviews": 600,
+    "ratingAvg": 4.2,
+    "downloads": 20000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 180 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co/app12.png",
+    "title": "TravelGo",
+    "companyName": "TripMate",
+    "description": "Plan your trips easily.",
+    "size": 70,
+    "reviews": 1400,
+    "ratingAvg": 4.5,
+    "downloads": 60000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 750 }
+    ]
+  },
+  {
+    "id": 13,
+    "image": "https://i.ibb.co/app13.png",
+    "title": "FinancePro",
+    "companyName": "MoneyWise",
+    "description": "Manage your personal finances.",
+    "size": 40,
+    "reviews": 1100,
+    "ratingAvg": 4.4,
+    "downloads": 45000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 460 }
+    ]
+  },
+  {
+    "id": 14,
+    "image": "https://i.ibb.co/app14.png",
+    "title": "GameZone",
+    "companyName": "FunPlay",
+    "description": "Play exciting mini games.",
+    "size": 90,
+    "reviews": 2600,
+    "ratingAvg": 4.6,
+    "downloads": 150000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 1490 }
+    ]
+  },
+  {
+    "id": 15,
+    "image": "https://i.ibb.co/app15.png",
+    "title": "RecipeBook",
+    "companyName": "CookMaster",
+    "description": "Discover and cook recipes.",
+    "size": 35,
+    "reviews": 500,
+    "ratingAvg": 4.3,
+    "downloads": 18000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 180 },
+      { "name": "5 star", "count": 150 }
+    ]
+  },
+  {
+    "id": 16,
+    "image": "https://i.ibb.co/app16.png",
+    "title": "MindRelax",
+    "companyName": "ZenTech",
+    "description": "Meditation and relaxation guide.",
+    "size": 28,
+    "reviews": 750,
+    "ratingAvg": 4.5,
+    "downloads": 35000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 305 }
+    ]
+  },
+  {
+    "id": 17,
+    "image": "https://i.ibb.co/app17.png",
+    "title": "LanguageLab",
+    "companyName": "LinguaTech",
+    "description": "Learn new languages easily.",
+    "size": 55,
+    "reviews": 1300,
+    "ratingAvg": 4.6,
+    "downloads": 70000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 655 }
+    ]
+  },
+  {
+    "id": 18,
+    "image": "https://i.ibb.co/app18.png",
+    "title": "MovieBox",
+    "companyName": "CinemaHub",
+    "description": "Watch movies and trailers.",
+    "size": 85,
+    "reviews": 2100,
+    "ratingAvg": 4.4,
+    "downloads": 95000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1030 }
+    ]
+  },
+  {
+    "id": 19,
+    "image": "https://i.ibb.co/app19.png",
+    "title": "CloudSync",
+    "companyName": "DataSafe",
+    "description": "Secure cloud storage solution.",
+    "size": 45,
+    "reviews": 900,
+    "ratingAvg": 4.3,
+    "downloads": 40000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 320 }
+    ]
+  },
+  {
+    "id": 20,
+    "image": "https://i.ibb.co/app20.png",
+    "title": "StudyPlanner",
+    "companyName": "EduTech",
+    "description": "Plan your study schedule effectively.",
+    "size": 32,
+    "reviews": 650,
+    "ratingAvg": 4.4,
+    "downloads": 22000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 190 }
+    ]
+  }
+]

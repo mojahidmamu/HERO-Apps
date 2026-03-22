@@ -8,7 +8,14 @@ import Image6 from "../../assets/image/demo-app (5).webp";
 import Image7 from "../../assets/image/demo-app (6).webp";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
+
+import appsData from "../../../public/data.json";
+
+
 const TreadingPage = () => {
+
+   const apps = appsData.slice(0, 8);
+
   return (
     <div>
       <h2 className="text-3xl mt-8 font-bold text-center">Trending Apps</h2>
@@ -17,6 +24,41 @@ const TreadingPage = () => {
       </p>
       {/* All apps */}
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 justify-center items-center mt-6 mx-8">
+        {
+          apps.map( (app) => (
+            <Link key={app.id} 
+            to={`/apps/${app.id}`}>
+              <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
+                <img className="w-60 h-50 rounded-xl mb-3" src={app.image} alt="" />
+                <p className="font-bold">{app.name}</p>
+                <div className="flex mt-2 justify-between">
+                  <div
+                    className="h-10 w-18 rounded-sm p-2 flex gap-2 "
+                    style={{ backgroundColor: "#F1F5E8" }}
+                  >
+                    <img className="w-5 h-5" src={downloadIcon} alt="" />
+                    <p className="font-bold" style={{ color: "#00D390" }}>
+                      {app.downloads}
+                    </p>
+                  </div>
+                  <div
+                    className="h-10 w-18 rounded-sm p-2 flex gap-2"
+                    style={{ backgroundColor: "#FFF0E1" }}  
+                  >
+                    <img className="w-5 h-5" src={ratingsIcon} alt="" />
+                    <p className="font-bold" style={{ color: "#FF8811" }}>
+                      {app.ratings}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))
+        }
+
+
+
+
         {/* First apps */}
         <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image2} alt="" />
@@ -217,6 +259,8 @@ const TreadingPage = () => {
             </div>
           </div>
         </div>
+
+
       </div>
 
       {/* Last button  */}
