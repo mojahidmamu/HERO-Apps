@@ -80,7 +80,7 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="divider m-0"></div>
+      <div className="divider m-0 before:bg-white after:bg-white"></div>
 
       {/* Bottom Section */}
       <div className="text-center p-4">

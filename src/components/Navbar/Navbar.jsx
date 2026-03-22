@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/image/logo.png";
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   const links = (
@@ -65,7 +66,8 @@ const Navbar = () => {
             className="btn text-white mr-3"
             style={{ backgroundColor: "#632EE3" }}
           >
-          <Link to="https://github.com/mojahidmamu">
+          <Link className="flex items-center gap-2" to="https://github.com/mojahidmamu">
+           <FaGithub className="text-lg" />
             Contribute  
           </Link>
           </a>
