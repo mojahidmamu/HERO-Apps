@@ -6,11 +6,13 @@ import Installation from "../Installation/Installation";
 import AppDetails from "../AppDetails/AppDetails";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; 
+import ErrorPage from "../ErrorPage/ErrorPage ";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

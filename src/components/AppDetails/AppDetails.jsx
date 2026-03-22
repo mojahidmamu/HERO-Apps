@@ -21,7 +21,7 @@ const AppDetails = () => {
   const [app, setApp] = useState(null);
   const [installed, setInstalled] = useState(false);
 
-   useEffect(() => {
+  useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
