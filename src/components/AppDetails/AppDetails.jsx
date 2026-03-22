@@ -47,7 +47,7 @@ const AppDetails = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-10">
       <div className="flex gap-6 border-b pb-6">
-        <img src={app.image} className="w-40 h-40 rounded" />
+        <img src={app.image} className="w-60 h-60 rounded" />
         <div>
           <h1 className="text-3xl font-bold">{app.title}</h1>
           <p className="text-gray-500">Developed by <span className="text-[#632EE3] font-semibold">{app.companyName}</span></p>
@@ -82,7 +82,7 @@ const AppDetails = () => {
       </div>
 
       <div>
-        <h2 className="mb-4 font-semibold">Ratings</h2>
+        <h2 className="mb-4 font-bold text-2xl">Ratings</h2>
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData} layout="vertical">
@@ -96,7 +96,7 @@ const AppDetails = () => {
       </div>
  
       <div className="border-t pt-6">
-        <h2 className="font-semibold mb-2 text-xl">Description</h2>
+        <h2 className="font-bold mb-2 text-2xl">Description</h2>
         <p className="text-gray-600">{app.description}</p>
       </div>
     </div>

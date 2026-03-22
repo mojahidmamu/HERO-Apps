@@ -85,7 +85,7 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="text-center p-4">
         <h1 className="text-sm font-medium">
-          Copyright © {new Date().getFullYear()} Hero.IO. All rights reserved.
+          Copyright © {new Date().getFullYear()} Hero.IO. All rights reserved by ABDULLAH ALL MOJAHID.
         </h1>
       </div>
 
