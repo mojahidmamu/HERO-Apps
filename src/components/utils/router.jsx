@@ -3,6 +3,7 @@ import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Home/Home";
 import Apps from "../../components/Apps/Apps";
 import Installation from "../Installation/Installation";
+import AppDetails from "../AppDetails/AppDetails";
 // import Contribute from "../Contribute/Contribute";
 // import Details from "../Details/Details";
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: "/installation",
         element: <Installation></Installation>,
       },
+      {
+        path: "/apps/:id",
+        element: <AppDetails></AppDetails>
+      }
       // {
       //   path: "/contribute",
       //   element: <Contribute></Contribute>

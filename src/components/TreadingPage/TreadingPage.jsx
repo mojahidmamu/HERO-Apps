@@ -47,7 +47,7 @@ const TreadingPage = () => {
                   >
                     <img className="w-5 h-5" src={ratingsIcon} alt="" />
                     <p className="font-bold" style={{ color: "#FF8811" }}>
-                      {app.ratings}
+                      {app.ratingAvg}
                     </p>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ const TreadingPage = () => {
 
 
 
-        {/* First apps */}
+{/*         
         <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image2} alt="" />
           <p className="font-bold">Forest: Focus for Productivity</p>
@@ -85,7 +85,7 @@ const TreadingPage = () => {
           </div>
         </div>
         {/* Second apps */}
-        <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
+        {/* <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image3} alt="" />
           <p className="font-bold">SmPlan:ToDo List with Reminder</p>
           <div className="flex mt-2 justify-between">
@@ -108,9 +108,9 @@ const TreadingPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Third apps */}
-        <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
+        {/* <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image4} alt="" />
           <p className="font-bold">FLIP - Focus Timer for Study</p>
           <div className="flex mt-2 justify-between">
@@ -133,9 +133,9 @@ const TreadingPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Fourth apps */}
-        <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
+        {/* <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image5} alt="" />
           <p className="font-bold">Pomocat - Cute Pomodoro Timer</p>
           <div className="flex mt-2 justify-between">
@@ -158,9 +158,9 @@ const TreadingPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Fifth apps */}
-        <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
+        {/* <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image6} alt="" />
           <p className="font-bold">Time Planner: Schedule & Tasks</p>
           <div className="flex mt-2 justify-between">
@@ -183,9 +183,9 @@ const TreadingPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Sixth apps */}
-        <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
+        {/* <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image7} alt="" />
           <p className="font-bold">Morning Habits - Daily Routine</p>
           <div className="flex mt-2 justify-between">
@@ -208,9 +208,9 @@ const TreadingPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Seven apps */}
-        <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
+        {/* <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image2} alt="" />
           <p className="font-bold">Focus Plant: Pomodoro Forest</p>
           <div className="flex mt-2 justify-between">
@@ -233,9 +233,9 @@ const TreadingPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Eighth apps */}
-        <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
+        {/* <div className="border p-4 rounded-sm shadow-md w-72 mt-6">
           <img className="w-60 h-50 rounded-xl mb-3" src={Image3} alt="" />
           <p className="font-bold">Alarmy - Alarm Clock & Sleep</p>
           <div className="flex mt-2 justify-between">
@@ -258,7 +258,7 @@ const TreadingPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div>   */}
 
 
       </div>
