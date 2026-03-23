@@ -11,7 +11,7 @@ import {
 import downloadIcon from "../../assets/image/icon-downloads.png";
 import ratingsIcon from "../../assets/image/icon-ratings.png";
 import reviewIcon from "../../assets/image/reviews.png";
-// import { getStoreApps, saveApp } from "../../components/utils/LocalStorage";
+import { getStoreApps, saveApp } from "../../components/utils/LocalStorage";
 
   
 
