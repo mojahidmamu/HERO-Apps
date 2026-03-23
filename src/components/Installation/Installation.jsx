@@ -8,17 +8,27 @@
 
     const [apps, setApps] = useState([]);
 
-     useEffect(() => {
+   useEffect(() => {
+  const loadApps = () => {
     const storedApps = getStoreApps();
-    setApps(storedApps);
-  }, []);
+    setApps(Array.isArray(storedApps) ? storedApps : []);
+  };
+
+  loadApps();  
+
+  window.addEventListener("storageUpdated", loadApps);
+
+  return () => {
+    window.removeEventListener("storageUpdated", loadApps);
+  };
+}, []);
 
     const handleRemove = (id) => {
       removeFromStore(id);
 
-         // update UI without reload
-        const updatedApps = apps.filter((app) => app.id !== id);
-        setApps(updatedApps);
+          
+        // const updatedApps = apps.filter((app) => app.id !== id);
+        // setApps(updatedApps);
 
         toast.success("App Uninstalled Successfully!");
         };
@@ -40,17 +50,17 @@
             placeholder="Sort By Size"
           />
         </div>
-
-         {/* 🔥 If no apps */}
+ 
         {apps.length === 0 && (
-          <p className="text-center mt-10 text-gray-400">
-            No apps installed yet 😢
+          <p className="text-center mt-10 text-red-400">
+            No apps installed yet  
           </p>
         )}  
 
         {/* Apps list */}
-        {/* <div>
-          {apps.map((app) => (
+        <div>
+          {Array.isArray(apps) &&
+            apps.map((app) => (
             <div
               key={app.id}
               className="flex justify-between items-center p-4 bg-gray-100 rounded-lg"
@@ -88,7 +98,7 @@
               </button>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     );
   };

@@ -1,22 +1,28 @@
-export const getStoreApps  = () => {
-    const data = localStorage.getItem("installedApps");
-    return data ? JSON.parse(data) : [];
-}
+ 
+export const getStoreApps = () => {
+  const data = localStorage.getItem("apps");
+  return data ? JSON.parse(data) : [];
+};
 
+ 
 export const saveApp = (app) => {
-    const storedApps = getStoreApps();
-    
-    const exixts = storedApps.find((a) => a.id === app.id);
+  const storedApps = getStoreApps();
 
-    if(exixts) {
-        alert("App already installed");
-        storedApps.push(app);
-        localStorage.setItem("installedApps", JSON.stringify(storedApps));
-    }
-}
+  const exists = storedApps.find((a) => a.id === app.id);
 
+  if (exists) return;  
+
+  const updated = [...storedApps, app];
+  localStorage.setItem("apps", JSON.stringify(updated));
+
+ 
+  window.dispatchEvent(new Event("storageUpdated"));
+};
+
+ 
 export const removeFromStore = (id) => {
-    const storeApps = getStoreApps().filter((app )=> app.id !== id);
-    localStorage.setItem("installedApps", JSON.stringify(storeApps));
+  const updated = getStoreApps().filter((app) => app.id !== id);
+  localStorage.setItem("apps", JSON.stringify(updated));  
 
-}
+    window.dispatchEvent(new Event("storageUpdated"));
+};
