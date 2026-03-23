@@ -49,47 +49,46 @@
         )}  
 
         {/* Apps list */}
-        <div className="grid gap-4 mt-6">
-        {apps.map((app) => (
-          <div
-            key={app.id}
-            className="flex justify-between items-center p-4 bg-gray-100 rounded-lg shadow-sm"
-          >
-            {/* Left */}
-            <div>
-              <h3 className="font-bold text-lg">{app.title}</h3>
-
-              <div className="flex gap-4 mt-2">
-                <div className="flex items-center gap-2 bg-[#F1F5E8] px-2 py-1 rounded">
-                  <img className="w-4 h-4" src={downloadIcon} alt="" />
-                  <p className="font-bold text-[#00D390]">
-                    {app.downloads}
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-2 bg-[#FFF0E1] px-2 py-1 rounded">
-                  <img className="w-4 h-4" src={ratingsIcon} alt="" />
-                  <p className="font-bold text-[#FF8811]">
-                    {app.ratingAvg}
-                  </p>
-                </div>
-
-                <p className="text-sm text-gray-500">
-                  {app.size} MB
-                </p>
-              </div>
-            </div>
-
-            {/* 🔥 Button */}
-            <button
-              onClick={() => handleRemove(app.id)}
-              className="btn btn-error"
+        {/* <div>
+          {apps.map((app) => (
+            <div
+              key={app.id}
+              className="flex justify-between items-center p-4 bg-gray-100 rounded-lg"
             >
-              Uninstall
-            </button>
+            <h3 className="font-bold">{app.title}</h3>
+            <div className="flex gap-4"> 
+              <div
+                                    className="h-10 px-2 rounded-sm flex items-center gap-2"
+                                    style={{ backgroundColor: "#F1F5E8" }}
+                                  >
+                                    <img className="w-5 h-5" src={downloadIcon} alt="" />
+                                    <p className="font-bold text-[#00D390]">
+                                      {app.downloads}
+                                    </p>
+                                  </div>
+              
+                                  <div
+                                    className="h-10 px-2 rounded-sm flex items-center gap-2"
+                                    style={{ backgroundColor: "#FFF0E1" }}
+                                  >
+                                    <img className="w-5 h-5" src={ratingsIcon} alt="" />
+                                    <p className="font-bold text-[#FF8811]">
+                                      {app.ratingAvg}
+                                    </p>
+                                  </div>
+                                  <div>
+                                    <p className="text-sm text-gray-500"> {app.size} MB </p>
+                                  </div>
           </div>
-        ))}
-      </div>
+              <button
+                onClick={() => handleRemove(app.id)}
+                className="btn btn-success"
+              >
+                Uninstall
+              </button>
+            </div>
+          ))}
+        </div> */}
       </div>
     );
   };
