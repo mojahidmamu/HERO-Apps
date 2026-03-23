@@ -12,6 +12,7 @@ import {
 import downloadIcon from "../../assets/image/icon-downloads.png";
 import ratingsIcon from "../../assets/image/icon-ratings.png";
 import reviewIcon from "../../assets/image/reviews.png";
+import {  saveApp, getStoreApps } from "../utils/LocalStorage";
 
   
 
@@ -19,30 +20,43 @@ const AppDetails = () => {
 
   const { id } = useParams();
   const [app, setApp] = useState(null);
-  const [installed, setInstalled] = useState(false);
+  const [installed, setInstalled] = useState(false); 
 
   useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const found = data.find((item) => item.id == id);
-        setApp(found);
-      });
-  }, [id]);
+  fetch("/apps.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const found = data.find((item) => item.id == id);
+      setApp(found);
+    });
+}, [id]);
 
-  if (!app) return <p className="p-10">Loading...</p>;
+   // 🔥 Check installed
+useEffect(() => {
+  if (!app) return;
 
-  const chartData = app.ratings.map((r) => ({
+  const storedApps = getStoreApps();
+  const exists = storedApps.find((item) => item.id === app.id);
+
+  if (exists) {
+    setInstalled(true);
+  }
+}, [app]);
+
+
+const chartData = app.ratings.map((r) => ({
     name: r.name,
     value: r.count,
   }));
 
 
   const handleInstall = () => {
-    setInstalled(true);
-    toast.success("App installed successfully!");
-  };
+  saveApp(app);  
+  setInstalled(true);
+  toast.success("App installed successfully!");
+}; 
 
+if (!app) return <p className="p-10 text-center">Loading app details...</p>;
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-10">

@@ -19,7 +19,7 @@
       const updated = getStoreApps();
       setApps(updated);
 
-      toast.error("App Uninstalled!");
+      toast.error("App Uninstalled Successfully!");
     };
 
     return (
