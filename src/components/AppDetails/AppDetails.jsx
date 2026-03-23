@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useParams } from "react-router-dom"; 
 import {
   BarChart,
   Bar,
@@ -12,7 +11,7 @@ import {
 import downloadIcon from "../../assets/image/icon-downloads.png";
 import ratingsIcon from "../../assets/image/icon-ratings.png";
 import reviewIcon from "../../assets/image/reviews.png";
-import {  saveApp, getStoreApps } from "../utils/LocalStorage";
+// import { getStoreApps, saveApp } from "../../components/utils/LocalStorage";
 
   
 
@@ -20,45 +19,39 @@ const AppDetails = () => {
 
   const { id } = useParams();
   const [app, setApp] = useState(null);
-  // const [installed, setInstalled] = useState(false); 
-  const [installed, setInstalled] = useState(() => {
-  const storedApps = getStoreApps();
-  return !!storedApps.find((item) => item.id == id);
-});
+  const [installed, setInstalled] = useState(false);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-  fetch("/apps.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const found = data.find((item) => item.id == id);
-      setApp(found);
-    });
-}, [id]);
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const found = data.find((item) => item.id == id);
+        setApp(found);
+      });
+  }, [id]);
 
+  if (!app) return <p className="p-10">Loading...</p>;
 
-// useEffect(() => {
-//   if (!app) return;
-
-//   const storedApps = getStoreApps();
-//   const exists = storedApps.find((item) => item.id === app.id);
-
-//   setInstalled(!!exists);
-// }, [app]);
-
-
-const chartData = app.ratings.map((r) => ({
+  const chartData = app.ratings.map((r) => ({
     name: r.name,
     value: r.count,
   }));
 
 
   const handleInstall = () => {
-  saveApp(app);  
-  setInstalled(true);
-  toast.success("App installed successfully!");
-}; 
+    if (installed) {
+    setMessage("⚠️ Already Installed!");
+  } else {
+    setInstalled(true);
+    setMessage("✅ App installed successfully!");
+  }
 
-if (!app) return <p className="p-10 text-center">Loading app details...</p>;
+  setTimeout(() => {
+    setMessage("");
+  }, 2000);  
+  };
+
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-10">
@@ -93,7 +86,16 @@ if (!app) return <p className="p-10 text-center">Loading app details...</p>;
             }`}
           >
             {installed ? "Installed" : `Install Now (${app.size} MB)`}
-          </button>
+          </button> 
+          {message && (
+            <p
+              className={`mt-3 text-center font-semibold ${
+                message.includes("Already") ? "text-red-500" : "text-green-600"
+              }`}
+            >
+              {message}
+            </p>
+          )}
         </div>
       </div>
 
