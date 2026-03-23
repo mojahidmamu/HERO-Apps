@@ -20,7 +20,11 @@ const AppDetails = () => {
 
   const { id } = useParams();
   const [app, setApp] = useState(null);
-  const [installed, setInstalled] = useState(false); 
+  // const [installed, setInstalled] = useState(false); 
+  const [installed, setInstalled] = useState(() => {
+  const storedApps = getStoreApps();
+  return !!storedApps.find((item) => item.id == id);
+});
 
   useEffect(() => {
   fetch("/apps.json")
@@ -31,17 +35,15 @@ const AppDetails = () => {
     });
 }, [id]);
 
-   // 🔥 Check installed
-useEffect(() => {
-  if (!app) return;
 
-  const storedApps = getStoreApps();
-  const exists = storedApps.find((item) => item.id === app.id);
+// useEffect(() => {
+//   if (!app) return;
 
-  if (exists) {
-    setInstalled(true);
-  }
-}, [app]);
+//   const storedApps = getStoreApps();
+//   const exists = storedApps.find((item) => item.id === app.id);
+
+//   setInstalled(!!exists);
+// }, [app]);
 
 
 const chartData = app.ratings.map((r) => ({
